@@ -1,0 +1,54 @@
+.filter-button-group {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1.44rem;
+	padding: 0;
+}
+
+@media screen and (max-width: 900px) {
+	.filter-button-group {
+        justify-content: flex-start;
+		gap: 1rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.filter-button-group {
+		gap: 0.75rem;
+	}
+}
+
+.filter-tag-button {
+	background-color: #ffffff;
+	color: #333;
+	border: none;
+	border-radius: 9999px;
+	padding: 0.4rem 0.9rem;
+	font-size: 1.25rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width: 900px) {
+    .filter-tag-button {
+    	padding: 0.2rem 0.6rem;
+	    font-size: 1rem;
+	}
+}
+
+/* Aktiv-Zustand */
+.filter-tag-button.is-active {
+	outline: none;
+	box-shadow: 0 0 0 2px var(--wp--preset--color--accent-500, #4c9c5a);
+}
+
+/* Hover-Zustand -> nur bei Hoverfähigen geräten */
+@media (hover: hover) {
+	.filter-tag-button:hover {
+		background-color: var(--wp--preset--color--accent-500, #4c9c5a);
+		color: #fff;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	}
+}

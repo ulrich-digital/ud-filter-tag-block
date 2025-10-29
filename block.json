@@ -1,0 +1,34 @@
+{
+    "apiVersion": 2,
+    "name": "ud/filter-tag-block",
+    "title": "Filter-Tag",
+    "category": "text",
+    "icon": "filter",
+    "description": "Ein klickbares Filter-Element mit Label und zugewiesenem Tag. Wird z.B. mit Isotope.js verwendet.",
+    "textdomain": "ud-filter-tag-block",
+    "editorStyle": "file:./build/editor-style.css",
+    "style": "file:./build/frontend-style.css",
+    "editorScript": "file:./build/editor-script.js",
+    "script": "file:./build/frontend-script.js",
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "filters": {
+            "type": "array",
+            "default": []
+        },
+        "applyToAccordion": {
+            "type": "boolean",
+            "default": false
+        },
+        "filterableTargets": {
+            "type": "array",
+            "default": []
+        },
+"enabledTargets": {
+    "type": "array",
+    "default": []
+  }
+    }
+}

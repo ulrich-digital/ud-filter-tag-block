@@ -1,0 +1,120 @@
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/css/editor.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+.filter-group-block {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 16px;
+  margin: 1.44rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.filter-group-block .filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.filter-group-block .filter-entry {
+  background: #fff;
+  border: 1px solid #32373c;
+  border-radius: 20px;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  line-height: 1.2;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.filter-group-block .filter-entry strong {
+  font-weight: 600;
+}
+.filter-group-block .filter-entry .label_container,
+.filter-group-block .filter-entry .chip_container {
+  cursor: pointer;
+}
+.filter-group-block .filter-entry .chip {
+  background: #eef0f3;
+  border-radius: 16px;
+  padding: 0.25rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 13px;
+  color: #333;
+}
+.filter-group-block .components-button.is-tertiary.filter-remove-button {
+  padding: 2px;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.filter-group-block .components-button.is-tertiary.filter-remove-button svg {
+  width: 12px;
+  height: 12px;
+  fill: #666;
+  transition: fill 0.2s ease;
+}
+.filter-group-block .components-button.is-tertiary.filter-remove-button svg:hover {
+  fill: #000;
+}
+.filter-group-block .filter-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.filter-group-block .filter-controls .components-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.filter-group-block .filter-controls input,
+.filter-group-block .filter-controls select {
+  max-width: 300px;
+  width: 100%;
+}
+.filter-group-block .add_filter_panel {
+  box-sizing: border-box;
+  border: 0;
+  background: #efefef;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.filter-group-block .add_filter_panel.is-opened h2 {
+  margin: 0;
+  padding: 0;
+}
+.filter-group-block .add-filter-area {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter-group-block_popover .components-popover__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px;
+  padding: 1.44rem;
+  border: 1px solid #8f8f8f;
+  border-radius: 16px;
+  box-shadow: -3px 3px 20px rgba(0, 0, 0, 0.1294117647);
+}
+.filter-group-block_popover .components-popover__content .input_fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.filter-group-block_popover .components-popover__content .components-button {
+  align-self: flex-end;
+}
