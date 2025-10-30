@@ -21,11 +21,16 @@ Der Block **Filter-Tag** wird im Gutenberg-Editor verwendet. Die Konfiguration e
   - **Filter-Tag** (muss vorhanden sein)
 - Tags werden aus `/wp-json/ud-shared/v1/tags` geladen
 
+## Screenshots
+![Frontend](assets/img/ud-filter-tag-block.png)
+*Filter-Ansicht im Frontend*
+
+
 ![Filter-UI im Editor](assets/img/editor.png)
-*Abbildung 1: Übersicht mit konfigurierten Filtern und Zielauswahl*
+*Übersicht mit konfigurierten Filtern und Zielauswahl*
 
 ![Filter hinzufügen](assets/img/editor-filter_hinzufugen.png)
-*Abbildung 2: Eingabe eines neuen Filters (Label + Tag)*
+*Eingabe eines neuen Filters (Label + Tag)*
 
 
 ### Filter sortieren
