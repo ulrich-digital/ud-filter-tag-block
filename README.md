@@ -1,25 +1,21 @@
-# Filter-Tag Block
+# UD Block: Filter Tag 
 
-Filtert `wp-block-ud-link-block`-Elemente im Editor per Tag – unterstützt Akkordeon-Blöcke und filterbare Gruppen.
+Block zur Filterung von `wp-block-ud-link-block`-Elementen direkt im Editor anhand frei definierbarer Tags.
+Unterstützt auch die Filterung innerhalb von Akkordeon-Blöcken und filterbaren Gruppen.
 
----
 
-## Beschreibung
 
-Das Plugin stellt einen Block zur Verfügung, mit dem sich Link-Blöcke im Editor anhand frei definierter Tags filtern lassen. Die Tags stammen aus einer zentralen REST-Schnittstelle und können im Editor frei kombiniert, sortiert und zugewiesen werden.
+## Funktionen
+- Filtert `UD Link Blocks` anhand zentral verwalteter Tags
+- Tags stammen aus dem REST-Endpunkt `/wp-json/ud-shared/v1/tags`
+- Mehrere Filter kombinierbar und sortierbar
+- Unterstützt zwei Zieltypen: filterbare Gruppen und Akkordeon-Blöcke
+- Komplette Konfiguration im Gutenberg-Editor
+- REST-basiertes Laden der verfügbaren Tags
+- Vollständig kompatibel mit dem `ud-accordion-block`
+- Automatisches Öffnen von Akkordeons mit sichtbaren Treffern
+- Unterstützt Drag & Drop zum Sortieren der Filter
 
----
-
-## Editor-Funktionalität
-
-Der Block **Filter-Tag** wird im Gutenberg-Editor verwendet. Die Konfiguration erfolgt vollständig im Editor-UI.
-
-### Filter anlegen
-
-- Klick auf das **„+“-Symbol** öffnet ein Popover zur Eingabe eines neuen Filters:
-  - **Anzeigetext** (frei wählbar)
-  - **Filter-Tag** (muss vorhanden sein)
-- Tags werden aus `/wp-json/ud-shared/v1/tags` geladen
 
 ## Screenshots
 ![Frontend](assets/img/ud-filter-tag-block.png)
@@ -33,12 +29,6 @@ Der Block **Filter-Tag** wird im Gutenberg-Editor verwendet. Die Konfiguration e
 *Eingabe eines neuen Filters (Label + Tag)*
 
 
-### Filter sortieren
-
-- Filter lassen sich per **Drag & Drop** verschieben
-- Die Reihenfolge bestimmt die Anzeigereihenfolge im Frontend
-
----
 
 ## Filterziele
 
@@ -57,26 +47,36 @@ Die Filter wirken auf zwei verschiedene Zieltypen, die im Block-Inspector aktivi
 - Akkordeons mit sichtbaren Treffern werden automatisch geöffnet
 - Verschachtelungen werden korrekt behandelt
 
----
 
-## REST-API
 
-Die verfügbaren Tags werden automatisch über folgenden Endpunkt geladen:
+## Technische Hinweise
 
-```
-/wp-json/ud-shared/v1/tags
-````
+- Die verfügbaren Tags werden automatisch über folgenden Endpunkt geladen:
 
-Dieser Endpunkt wird vom Plugin Shared API bereitgestellt.
-Ist dieses Plugin aktiv, steht die Tag-Liste ohne weitere Konfiguration zur Verfügung.
+    ```
+    /wp-json/ud-shared/v1/tags
+    ````
 
-Ein gültiger Nonce zur Authentifizierung wird über
-```js
-window.udLinkBlockSettings.nonce
-````
-automatisch bereitgestellt.
+    Dieser Endpunkt wird vom Plugin **Shared API** bereitgestellt.
+    Ist dieses Plugin aktiv, steht die Tag-Liste ohne weitere Konfiguration zur Verfügung.
 
-### Integration
-Das Plugin Link Block registriert seine Tags in der Shared API.
-Weitere Plugins können den Endpunkt ebenfalls erweitern, indem sie Tags dort hinzufügen.
+- Authentifizierung erfolgt über Nonce:
+    ```js
+    window.udLinkBlockSettings.nonce
+    ````
+
+- Das Plugin ud-link-block registriert seine Tags in der Shared-API. Weitere Plugins können Tags hinzufügen, indem sie denselben Endpunkt erweitern.
+
+
+
+## Autor
+
+[ulrich.digital gmbh](https://ulrich.digital)
+
+
+## Lizenz
+
+GPL v2 or later
+[https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+
 
